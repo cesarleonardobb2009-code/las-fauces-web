@@ -1,0 +1,704 @@
+/* ==========================================================================
+   ETAPA 2: VARIABLES CSS, RESET Y ESTILOS BASE (100% BORDES RECTOS)
+   ========================================================================== */
+:root {
+    --fondo: #f9f9f7;
+    --blanco: #ffffff;
+    --amarillo-suave: #fef3c7;
+    --amarillo: #f59e0b;
+    --amarillo-hover: #d97706;
+    --whatsapp: #25d366;
+    --whatsapp-hover: #1ebe5d;
+    --texto: #374151;
+    --texto-suave: #6b7280;
+    --borde: #e5e7eb;
+    --sombra: 0 3px 14px rgba(0, 0, 0, 0.04);
+    --radio: 0px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border-radius: var(--radio);
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN, BOTÓN HAMBURGUESA MÓVIL Y FOOTER (FLEXBOX)
+   ========================================================================== */
+.encabezado-portal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--borde);
+    padding: 0.85rem 4%;
+    gap: 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.bloque-nav-izquierdo, .marca-portal, .lista-menu-izquierdo {
+    display: flex;
+    align-items: center;
+}
+
+.bloque-nav-izquierdo { gap: 2rem; }
+.marca-portal { gap: 0.65rem; text-decoration: none; color: var(--texto); }
+.marca-portal strong { font-size: 1.35rem; font-weight: 800; }
+
+.logo-portal-img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+    border: none;
+}
+
+/* Botón hamburguesa: oculto en escritorio, visible en móvil */
+.boton-hamburguesa {
+    display: none;
+    background-color: var(--amarillo-suave);
+    border: 1px solid var(--amarillo);
+    color: #92400e;
+    font-size: 1.6rem;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+}
+
+.lista-menu-izquierdo { list-style: none; gap: 1.4rem; }
+
+.lista-menu-izquierdo a {
+    text-decoration: none;
+    color: var(--texto);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.lista-menu-izquierdo a:hover,
+.lista-menu-izquierdo a.activo {
+    color: #b45309;
+    font-weight: 600;
+    border-bottom-color: var(--amarillo);
+}
+
+.pie-pagina {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.35rem;
+    background-color: var(--blanco);
+    border-top: 1px solid var(--borde);
+    color: var(--texto-suave);
+    padding: 1.8rem 4%;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   BOTONES Y TARJETAS BASE COMPARTIDAS (100% RECTANGULARES)
+   ========================================================================== */
+.boton-whatsapp-header, .btn-whatsapp-card,
+.boton-primario, .btn-contactar-card, .boton-accion-formulario {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.boton-whatsapp-header, .btn-whatsapp-card {
+    background-color: var(--whatsapp);
+    font-size: 0.9rem;
+    padding: 0.55rem 1.2rem;
+}
+.boton-whatsapp-header:hover, .btn-whatsapp-card:hover { background-color: var(--whatsapp-hover); }
+
+.boton-primario, .boton-accion-formulario {
+    display: inline-block;
+    background-color: var(--amarillo);
+    font-size: 0.95rem;
+    padding: 0.75rem 1.6rem;
+}
+
+.btn-contactar-card {
+    background-color: var(--amarillo);
+    font-size: 0.88rem;
+    padding: 0.55rem 1.35rem;
+}
+
+.boton-primario:hover, .btn-contactar-card:hover, .boton-accion-formulario:hover {
+    background-color: var(--amarillo-hover);
+}
+
+.tarjeta-suave, .banner-hero, .encabezado-seccion {
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    padding: 1.3rem;
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-suave h2 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.tarjeta-suave p { font-size: 0.9rem; color: var(--texto-suave); margin-bottom: 0.4rem; }
+
+.tarjeta-acento-amarillo { background-color: var(--amarillo-suave); border-color: #fde68a; }
+.tarjeta-acento-amarillo h2 { color: #92400e; }
+.tarjeta-acento-amarillo p { color: #78350f; }
+
+.lista-lateral { padding-left: 1.1rem; font-size: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.lista-lateral a, .enlace-suave { color: #b45309; text-decoration: none; font-weight: 600; }
+.lista-lateral a:hover, .enlace-suave:hover { text-decoration: underline; }
+
+/* ==========================================================================
+   INICIO: 3 COLUMNAS (GRID), BANNER Y LISTA DE BOTONES RECTANGULARES
+   ========================================================================== */
+.layout-tres-columnas {
+    max-width: 1320px;
+    margin: 2rem auto;
+    padding: 0 2.5%;
+    display: grid;
+    grid-template-columns: 240px 1fr 240px;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.columna-lateral, .columna-central { display: flex; flex-direction: column; gap: 1.35rem; }
+
+.imagen-lateral-relleno {
+    position: relative;
+    height: 360px;
+    overflow: hidden;
+    border: 1px solid var(--borde);
+    box-shadow: var(--sombra);
+}
+
+.imagen-lateral-relleno img { width: 100%; height: 100%; object-fit: cover; }
+
+.imagen-lateral-relleno figcaption {
+    position: absolute;
+    inset: auto 0 0 0;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.95));
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1.2rem 0.8rem 0.65rem;
+}
+
+.banner-hero { padding: 2.2rem 1.8rem; text-align: center; }
+.banner-hero h1 { font-size: 1.9rem; margin-bottom: 1.2rem; }
+.banner-hero p { max-width: 560px; margin: 0 auto 1.4rem; color: var(--texto-suave); font-size: 0.95rem; }
+
+.etiqueta-amarilla {
+    display: inline-block;
+    background-color: var(--amarillo-suave);
+    color: #92400e;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.25rem 0.9rem;
+    margin-bottom: 0.7rem;
+}
+
+.banner-imagen-grande { margin: 0 auto 1.4rem; overflow: hidden; border: 1px solid var(--borde); }
+.banner-imagen-grande img { width: 100%; height: 310px; object-fit: cover; }
+
+.seccion-ayuda-lista, .lista-botones-grandes { display: flex; flex-direction: column; gap: 0.9rem; list-style: none; }
+.seccion-ayuda-lista h2 { font-size: 1.25rem; text-align: center; }
+
+.boton-opcion-grande {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    padding: 1.25rem 2rem;
+    text-decoration: none;
+    box-shadow: var(--sombra);
+    transition: 0.2s;
+}
+
+.boton-opcion-grande:hover { background-color: var(--amarillo-suave); border-color: var(--amarillo); }
+.titulo-boton { font-size: 1.1rem; font-weight: 700; color: var(--texto); }
+.detalle-boton { font-size: 0.9rem; color: var(--texto-suave); }
+
+/* ==========================================================================
+   COMPRAR: BUSCADOR, CATÁLOGO Y TAMAÑO UNIFORME DE IMÁGENES
+   ========================================================================== */
+.contenedor-productos { max-width: 1120px; margin: 2rem auto; padding: 0 3%; display: flex; flex-direction: column; gap: 1.4rem; }
+.hilera-info-superior { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+.encabezado-resultados h1 { font-size: 1.35rem; font-weight: 700; }
+
+.barra-filtros {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 0.85rem;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    padding: 1rem;
+    box-shadow: var(--sombra);
+}
+
+.barra-filtros input,
+.barra-filtros select {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid #d1d5db;
+    background-color: var(--fondo);
+    font: inherit;
+    font-size: 0.92rem;
+}
+
+.barra-filtros input:focus,
+.barra-filtros select:focus {
+    outline: 2px solid var(--amarillo);
+    background-color: var(--blanco);
+    border-color: transparent;
+}
+
+.btn-limpiar-filtros {
+    background-color: var(--amarillo-suave);
+    color: #92400e;
+    border: 1px solid #fde68a;
+    padding: 0.65rem 1.1rem;
+    font-weight: 700;
+    font-size: 0.88rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-limpiar-filtros:hover {
+    background-color: var(--amarillo);
+    color: var(--blanco);
+}
+
+.mensaje-vacio {
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+}
+
+.mensaje-vacio p {
+    margin-bottom: 1.1rem;
+}
+
+.lista-propiedades-portal { display: grid; grid-template-columns: 1fr; gap: 1.35rem; }
+
+.tarjeta-inmueble {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    align-items: stretch;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: 0.2s;
+}
+
+.tarjeta-inmueble:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07); transform: translateY(-2px); }
+
+.foto-inmueble {
+    position: relative;
+    width: 100%;
+    height: 275px;
+    overflow: hidden;
+}
+
+.carrusel-pista {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 275px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carrusel-pista::-webkit-scrollbar {
+    display: none;
+}
+
+.carrusel-pista li {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 275px;
+    scroll-snap-align: start;
+}
+
+.carrusel-pista img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    display: block;
+}
+
+.btn-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(17, 24, 39, 0.65);
+    color: var(--blanco);
+    border: none;
+    width: 32px;
+    height: 44px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn-carrusel:hover {
+    background-color: rgba(17, 24, 39, 0.9);
+}
+
+.btn-carrusel.prev { left: 0; }
+.btn-carrusel.next { right: 0; }
+
+.contador-fotos {
+    position: absolute;
+    bottom: 34px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: var(--texto);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid var(--borde);
+    z-index: 10;
+}
+
+.franja-foto {
+    position: absolute;
+    inset: auto 0 0 0;
+    background-color: rgba(27, 54, 93, 0.9);
+    color: var(--blanco);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.85rem;
+    z-index: 10;
+}
+
+.info-inmueble { padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.45rem; }
+.tipo-propiedad, .ubicacion-inmueble, .resumen-inmueble { font-size: 0.86rem; color: var(--texto-suave); }
+.precio-inmueble { font-size: 1.45rem; font-weight: 800; line-height: 1.1; }
+.titulo-inmueble { font-size: 1.05rem; font-weight: 700; }
+
+.datos-tecnicos, .etiquetas-amenidades { display: flex; flex-wrap: wrap; list-style: none; gap: 0.8rem; font-size: 0.88rem; }
+.etiquetas-amenidades { gap: 0.45rem; margin: 0.25rem 0; }
+.etiquetas-amenidades li {
+    background-color: var(--fondo);
+    border: 1px solid var(--borde);
+    color: var(--texto-suave);
+    font-size: 0.76rem;
+    padding: 0.2rem 0.65rem;
+}
+
+.acciones-inmueble {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--borde);
+}
+
+/* ==========================================================================
+   CONTACTO, VALIDACIONES JS, RECIBOS Y MODO IMPRESIÓN PDF
+   ========================================================================== */
+.contenedor-contacto-doble { max-width: 1050px; margin: 2rem auto; padding: 0 3%; display: flex; flex-direction: column; gap: 1.5rem; }
+.encabezado-seccion { text-align: center; }
+.encabezado-seccion h1 { font-size: 1.65rem; margin-bottom: 0.3rem; }
+
+.formulario-cuadros-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+.cuadro-ancho-completo { grid-column: 1 / -1; }
+
+.cuadro-modular {
+    position: relative;
+    background-color: var(--blanco);
+    border: 1.5px dashed #cbd5e1;
+    padding: 1.6rem;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cuadro-modular legend {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #92400e;
+    background-color: var(--amarillo-suave);
+    border: 1px solid #fde68a;
+    padding: 0.25rem 0.95rem;
+}
+
+.nota-whatsapp { font-size: 0.88rem; color: var(--texto-suave); margin-top: auto; }
+.grupo-campo { display: flex; flex-direction: column; gap: 0.35rem; }
+.grupo-campo label { font-size: 0.92rem; font-weight: 500; }
+
+.grupo-campo input, .grupo-campo select, .grupo-campo textarea {
+    width: 100%;
+    padding: 0.68rem 0.85rem;
+    border: 1px solid #d1d5db;
+    background-color: var(--fondo);
+    font: inherit;
+    font-size: 0.92rem;
+}
+
+.grupo-campo input:focus, .grupo-campo select:focus, .grupo-campo textarea:focus {
+    outline: 2px solid var(--amarillo);
+    background-color: var(--blanco);
+    border-color: transparent;
+}
+
+/* Alertas visuales de validación JS por campo (Etapa 3) */
+.mensaje-validacion {
+    color: #b91c1c;
+    background-color: #fef2f2;
+    border-left: 3px solid #dc2626;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.campo-invalido {
+    border: 1.5px solid #dc2626 !important;
+    background-color: #fef2f2 !important;
+}
+
+.pie-formulario { display: flex; justify-content: flex-end; margin-top: auto; padding-top: 0.4rem; }
+
+.aviso-pago-hotel {
+    background-color: var(--amarillo-suave);
+    border-left: 4px solid var(--amarillo);
+    color: #78350f;
+    font-size: 0.88rem;
+    padding: 0.85rem 1rem;
+}
+
+.alerta-ocupado {
+    background-color: #fef2f2;
+    border-left: 4px solid #dc2626;
+    color: #991b1b;
+    font-size: 0.88rem;
+    padding: 0.85rem 1rem;
+}
+
+.caja-codigo-generado {
+    text-align: center;
+    border: 2px solid var(--amarillo);
+}
+
+.codigo-destacado {
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    background-color: var(--blanco);
+    border: 1px dashed #b45309;
+    display: inline-block;
+    padding: 0.4rem 1.5rem;
+    margin: 0.6rem 0;
+    color: #92400e !important;
+}
+
+.advertencia-critica {
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+.seccion-consulta-recibo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-top: 1rem;
+}
+
+.fila-busqueda-codigo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.8rem;
+}
+
+.fila-busqueda-codigo input {
+    padding: 0.72rem 0.9rem;
+    border: 1px solid #d1d5db;
+    background-color: var(--fondo);
+    font: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.texto-error {
+    color: #b91c1c;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.recibo-oficial {
+    background-color: var(--blanco);
+    border: 2px solid var(--texto);
+    padding: 1.8rem;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.encabezado-recibo {
+    border-bottom: 2px solid var(--borde);
+    padding-bottom: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.encabezado-recibo h2 { font-size: 1.2rem; }
+
+.lista-datos-recibo {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.acciones-recibo {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.9rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--borde);
+}
+
+.boton-cancelar-reserva {
+    background-color: #dc2626;
+    color: var(--blanco);
+    border: none;
+    padding: 0.75rem 1.4rem;
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+}
+
+.boton-cancelar-reserva:hover:not(:disabled) { background-color: #b91c1c; }
+.boton-cancelar-reserva:disabled { background-color: #9ca3af; cursor: not-allowed; }
+
+@media print {
+    .encabezado-portal,
+    .encabezado-seccion,
+    #formulario-contacto,
+    #form-buscar-reserva,
+    #confirmacion-envio,
+    .no-imprimir {
+        display: none !important;
+    }
+
+    body, .contenedor-contacto-doble {
+        background: #ffffff;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .recibo-oficial {
+        box-shadow: none;
+        border: 2px solid #000000;
+    }
+}
+
+/* ==========================================================================
+   MEDIA QUERIES: LAPTOP, TABLET Y MENÚ HAMBURGUESA MÓVIL (<768px)
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .layout-tres-columnas { grid-template-columns: 200px 1fr 200px; gap: 1.2rem; }
+}
+
+@media (max-width: 900px) {
+    .layout-tres-columnas, .hilera-info-superior, .formulario-cuadros-grid { grid-template-columns: 1fr; }
+    .barra-filtros { grid-template-columns: 1fr 1fr; }
+    .columna-central { order: 1; }
+    .columna-lateral { order: 2; display: grid; grid-template-columns: repeat(2, 1fr); }
+    .imagen-lateral-relleno { grid-column: 1 / -1; height: 220px; }
+}
+
+@media (max-width: 767px) {
+    .encabezado-portal {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.8rem;
+    }
+
+    .bloque-nav-izquierdo {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* Mostrar botón hamburguesa en móvil */
+    .boton-hamburguesa {
+        display: block;
+    }
+
+    /* Ocultar navegación hasta que se haga clic en el botón hamburguesa */
+    #nav-principal {
+        display: none;
+        width: 100%;
+        border-top: 1px solid var(--borde);
+        padding-top: 0.6rem;
+    }
+
+    #nav-principal.abierto {
+        display: block;
+    }
+
+    .lista-menu-izquierdo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .bloque-acciones-derecho {
+        text-align: center;
+    }
+
+    .boton-whatsapp-header {
+        display: block;
+        width: 100%;
+    }
+
+    .banner-imagen-grande img { height: 210px; }
+    .columna-lateral, .barra-filtros, .tarjeta-inmueble, .lista-datos-recibo, .fila-busqueda-codigo { grid-template-columns: 1fr; }
+    .foto-inmueble, .carrusel-pista, .carrusel-pista li, .carrusel-pista img { height: 220px; }
+    .btn-whatsapp-card, .btn-contactar-card { flex: 1; text-align: center; }
+    .boton-opcion-grande { padding: 1.1rem 1.3rem; }
+    .boton-accion-formulario { width: 100%; }
+}

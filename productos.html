@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Fauces | Propiedades (25 Opciones)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="encabezado-portal">
+        <section class="bloque-nav-izquierdo" aria-label="Marca y navegación principal">
+            <a href="index.html" class="marca-portal">
+                <img src="https://i.ibb.co/PZWQr73M/i.png" alt="Logotipo Las Fauces" class="logo-portal-img" style="height: 75px; width: auto;">
+                <strong>Las Fauces</strong>
+            </a>
+
+            <!-- Botón hamburguesa interactivo para versión móvil (Etapa 3) -->
+            <button type="button" id="btn-menu-movil" class="boton-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false">
+                &#9776;
+            </button>
+
+            <nav id="nav-principal" aria-label="Menú principal">
+                <ul class="lista-menu-izquierdo">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="activo">Propiedades</a></li>
+                    <li><a href="contacto.html">Reservar / Mi Recibo</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <aside class="bloque-acciones-derecho" aria-label="Contacto directo">
+            <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="boton-whatsapp-header">WhatsApp: 479 348 6012</a>
+        </aside>
+    </header>
+
+    <main class="contenedor-productos">
+        <section class="hilera-info-superior" aria-label="Guía rápida">
+            <article class="tarjeta-suave tarjeta-acento-amarillo">
+                <h2>1. Explora cada propiedad</h2>
+                <p>Usa las flechas <strong>&lsaquo; &rsaquo;</strong> o desliza sobre las fotos para conocer el interior de cada opción.</p>
+            </article>
+
+            <article class="tarjeta-suave">
+                <h2>2. 25 Opciones en León</h2>
+                <p>Propiedades verificadas en Zona Norte, Centro, Sur, Oriente y Poniente de León, Gto.</p>
+            </article>
+
+            <article class="tarjeta-suave">
+                <h2>3. Pago en Recepción</h2>
+                <p>Presiona <strong>Reservar</strong> para elegir fecha en calendario y pagar en efectivo al llegar.</p>
+            </article>
+        </section>
+
+        <header class="encabezado-resultados">
+            <h1 id="contador-resultados">25 Propiedades disponibles en León, Guanajuato</h1>
+        </header>
+
+        <!-- BUSCADOR Y FILTROS EN TIEMPO REAL -->
+        <form class="barra-filtros" onsubmit="return false;" aria-label="Filtrar propiedades">
+            <input type="search" id="filtro-texto" placeholder="Buscar por nombre, colonia o característica (ej. Norte, jardín, Campestre)...">
+            
+            <select id="filtro-recamaras" aria-label="Filtrar por recámaras">
+                <option value="0">Recámaras: Todas</option>
+                <option value="2">2 o más recámaras</option>
+                <option value="3">3 o más recámaras</option>
+                <option value="4">4 recámaras</option>
+            </select>
+
+            <select id="filtro-precio" aria-label="Filtrar por precio máximo">
+                <option value="99999999">Precio: Todos</option>
+                <option value="2000000">Hasta $ 2,000,000</option>
+                <option value="3000000">Hasta $ 3,000,000</option>
+                <option value="4000000">Hasta $ 4,000,000</option>
+            </select>
+
+            <button type="button" id="btn-limpiar" class="btn-limpiar-filtros">Limpiar</button>
+        </form>
+
+        <!-- LISTADO DE LAS 25 PROPIEDADES -->
+        <section class="lista-propiedades-portal" aria-label="Listado de 25 propiedades">
+
+            <!-- CASA 1 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Residencial Zona Norte"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Sala interior"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80" alt="Cocina integral"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="Recámara principal"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa residencial</p>
+                    <p class="precio-inmueble">$ 2,450,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>180 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">1. Casa Residencial Zona Norte</h2>
+                    <p class="ubicacion-inmueble">Col. Jardines del Norte, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Jardín trasero</li>
+                        <li>Cocina integral</li>
+                        <li>Vigilancia</li>
+                    </ul>
+                    <p class="resumen-inmueble">Amplia residencia iluminada con acabados modernos, sala-comedor de gran amplitud y patio de servicio.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 2 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Familiar Zona Centro"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Estancia principal"></li>
+                        <li><img src="https://images.unsplash.com/photo-1565183928294-7063f23ce0f8?auto=format&fit=crop&w=700&q=80" alt="Comedor y cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="Baño completo"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Vie 09:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa familiar</p>
+                    <p class="precio-inmueble">$ 1,680,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>120 m²</strong> lote</li>
+                        <li><strong>2</strong> recámaras</li>
+                        <li><strong>1.5</strong> baños</li>
+                        <li><strong>1</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">2. Casa Familiar Zona Centro</h2>
+                    <p class="ubicacion-inmueble">Zona Centro Histórico, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Escuelas cercanas</li>
+                        <li>Patio interior</li>
+                        <li>Lista para habitar</li>
+                    </ul>
+                    <p class="resumen-inmueble">Excelente ubicación cerca de parques, comercios y transporte público. Ideal para familias.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 3 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&q=80" alt="Fachada Residencia Campestre Zona Sur"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&q=80" alt="Sala doble altura"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=700&q=80" alt="Cocina equipada"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80" alt="Jardín y terraza"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Sáb-Dom 11:00 - 16:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Residencia en privada</p>
+                    <p class="precio-inmueble">$ 3,890,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>320 m²</strong> lote</li>
+                        <li><strong>4</strong> recámaras</li>
+                        <li><strong>3</strong> baños</li>
+                        <li><strong>3</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">3. Residencia Campestre Zona Sur</h2>
+                    <p class="ubicacion-inmueble">Fraccionamiento El Bosque, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Terraza amplia</li>
+                        <li>Estudio</li>
+                        <li>Circuito cerrado</li>
+                    </ul>
+                    <p class="resumen-inmueble">Privada tranquila con áreas verdes, terraza techada, estudio en planta baja y acabados de lujo.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 4 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Moderna Zona Oriente"></li>
+                        <li><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Sala contemporánea"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80" alt="Cocina moderna"></li>
+                        <li><img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=700&q=80" alt="Recámara con balcón"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 09:30 - 17:30</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa moderna</p>
+                    <p class="precio-inmueble">$ 1,950,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>150 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">4. Casa Moderna Zona Oriente</h2>
+                    <p class="ubicacion-inmueble">Col. Brisas del Oriente, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Balcón</li>
+                        <li>Dos plantas</li>
+                        <li>Área de lavado</li>
+                    </ul>
+                    <p class="resumen-inmueble">Diseño contemporáneo de dos niveles con recámara principal con balcón y patio de servicio.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 5 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt="Fachada Quinta Residencial Poniente"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=700&q=80" alt="Interior amplio"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=700&q=80" alt="Barra de cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=700&q=80" alt="Suite principal"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Mar-Dom 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Quinta residencial</p>
+                    <p class="precio-inmueble">$ 4,350,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>410 m²</strong> lote</li>
+                        <li><strong>4</strong> recámaras</li>
+                        <li><strong>3.5</strong> baños</li>
+                        <li><strong>3</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">5. Quinta Residencial Zona Poniente</h2>
+                    <p class="ubicacion-inmueble">Lomas del Poniente, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Jardín panorámico</li>
+                        <li>Doble altura</li>
+                        <li>Cochera techada</li>
+                    </ul>
+                    <p class="resumen-inmueble">Espectacular residencia con jardín panorámico, sala de estar doble altura y cocina equipada.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 6 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Minimalista Valle Verde"></li>
+                        <li><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80" alt="Comedor iluminado"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Cocina integral blanca"></li>
+                        <li><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=700&q=80" alt="Dormitorio minimalista"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Vie 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa minimalista</p>
+                    <p class="precio-inmueble">$ 2,180,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>165 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">6. Casa Minimalista Valle Verde</h2>
+                    <p class="ubicacion-inmueble">Col. Valle Verde, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Acabados en piedra</li>
+                        <li>Iluminación natural</li>
+                        <li>Cisterna</li>
+                    </ul>
+                    <p class="resumen-inmueble">Acabados en piedra natural, patio interior y excelente distribución en zona tranquila.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 7 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Colonial San Ángel"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Patio central"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Cocina rústica moderna"></li>
+                        <li><img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=700&q=80" alt="Habitación principal"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Mié-Dom 11:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa estilo colonial</p>
+                    <p class="precio-inmueble">$ 2,790,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>210 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">7. Casa Colonial San Ángel</h2>
+                    <p class="ubicacion-inmueble">Barrio de San Ángel, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Vigas de madera</li>
+                        <li>Terraza</li>
+                        <li>Remodelada</li>
+                    </ul>
+                    <p class="resumen-inmueble">Estilo tradicional renovado con vigas de madera, amplias habitaciones y terraza social.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 8 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1598228723793-52759bba239c?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Dúplex Las Torres"></li>
+                        <li><img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=700&q=80" alt="Sala acogedora"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=700&q=80" alt="Cocina funcional"></li>
+                        <li><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Recámara secundaria"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 09:00 - 16:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa dúplex</p>
+                    <p class="precio-inmueble">$ 1,490,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>105 m²</strong> lote</li>
+                        <li><strong>2</strong> recámaras</li>
+                        <li><strong>1</strong> baño</li>
+                        <li><strong>1</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">8. Casa Dúplex Las Torres</h2>
+                    <p class="ubicacion-inmueble">Blvd. Las Torres, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Vías rápidas</li>
+                        <li>Transporte cercano</li>
+                        <li>Accesible</li>
+                    </ul>
+                    <p class="resumen-inmueble">Opción funcional y accesible con acceso rápido a bulevares principales y centros comerciales.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 9 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=80" alt="Fachada Residencia El Mirador"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=700&q=80" alt="Sala de estar con vista"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=80" alt="Cocina con isla"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Recámara con vestidor"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Sáb-Dom 10:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Residencia contemporánea</p>
+                    <p class="precio-inmueble">$ 3,520,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>290 m²</strong> lote</li>
+                        <li><strong>4</strong> recámaras</li>
+                        <li><strong>3</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">9. Residencia El Mirador</h2>
+                    <p class="ubicacion-inmueble">Cumbres del Mirador, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Roof Garden</li>
+                        <li>Vista panorámica</li>
+                        <li>Seguridad 24/7</li>
+                    </ul>
+                    <p class="resumen-inmueble">Vista abierta a la ciudad, roof garden equipado y acceso controlado en zona residencial.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 10 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Fachada Residencia Gran Jardín"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Sala de estar"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80" alt="Cocina integral"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Residencia en privada</p>
+                    <p class="precio-inmueble">$ 4,120,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>350 m²</strong> lote</li>
+                        <li><strong>4</strong> recámaras</li>
+                        <li><strong>3.5</strong> baños</li>
+                        <li><strong>3</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">10. Residencia Gran Jardín</h2>
+                    <p class="ubicacion-inmueble">Blvd. Campestre, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Alberca común</li>
+                        <li>Casa club</li>
+                        <li>Acabados de lujo</li>
+                    </ul>
+                    <p class="resumen-inmueble">Exclusiva propiedad frente a parque interno con cocina equipada en granito y terraza.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 11 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Los Naranjos"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Sala principal"></li>
+                        <li><img src="https://images.unsplash.com/photo-1565183928294-7063f23ce0f8?auto=format&fit=crop&w=700&q=80" alt="Comedor"></li>
+                        <li><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="Baño"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Vie 09:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa en fraccionamiento</p>
+                    <p class="precio-inmueble">$ 2,320,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>175 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">11. Casa Los Naranjos</h2>
+                    <p class="ubicacion-inmueble">Fracc. Los Naranjos, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Canchas deportivas</li>
+                        <li>Acceso controlado</li>
+                        <li>Jardín</li>
+                    </ul>
+                    <p class="resumen-inmueble">Entorno familiar seguro con áreas verdes, juegos infantiles y excelente iluminación interior.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 12 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Puerta Dorada"></li>
+                        <li><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Interior sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80" alt="Cocina moderna"></li>
+                        <li><img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Sáb-Dom 10:00 - 16:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa residencial</p>
+                    <p class="precio-inmueble">$ 3,150,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>240 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>3</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">12. Casa Puerta Dorada</h2>
+                    <p class="ubicacion-inmueble">Zona Sur Puerta Dorada, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Sala de TV</li>
+                        <li>Vestidor amplio</li>
+                        <li>Seguridad 24/7</li>
+                    </ul>
+                    <p class="resumen-inmueble">Cerca de centros comerciales y universidades, con sala de televisión en planta alta.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 13 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Vista Hermosa"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=700&q=80" alt="Estancia"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=700&q=80" alt="Habitación"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 09:30 - 17:30</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa amplia</p>
+                    <p class="precio-inmueble">$ 1,820,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>140 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2</strong> baños</li>
+                        <li><strong>1</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">13. Casa Vista Hermosa</h2>
+                    <p class="ubicacion-inmueble">Col. Vista Hermosa, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Recámara en PB</li>
+                        <li>Patio amplio</li>
+                        <li>Gas estacionario</li>
+                    </ul>
+                    <p class="resumen-inmueble">Práctica distribución con una recámara completa en planta baja y patio trasero techado.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 14 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa San Isidro"></li>
+                        <li><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80" alt="Comedor"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=700&q=80" alt="Dormitorio"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Vie 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa tradicional</p>
+                    <p class="precio-inmueble">$ 2,050,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>160 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">14. Casa Jardines de San Isidro</h2>
+                    <p class="ubicacion-inmueble">Col. Jardines de San Isidro, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Avenida principal</li>
+                        <li>Cisterna</li>
+                        <li>Portón eléctrico</li>
+                    </ul>
+                    <p class="resumen-inmueble">Excelente conectividad vial, espacios amplios y portón automatizado para dos vehículos.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 15 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa El Mayorazgo"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=700&q=80" alt="Sala de estar"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=80" alt="Cocina moderna"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Recámara principal"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Sáb-Dom 10:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Residencia en privada</p>
+                    <p class="precio-inmueble">$ 3,690,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>280 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>3.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">15. Residencia El Mayorazgo</h2>
+                    <p class="ubicacion-inmueble">El Mayorazgo Residencial, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Casa club</li>
+                        <li>Lago artificial</li>
+                        <li>Vigilancia 24/7</li>
+                    </ul>
+                    <p class="resumen-inmueble">Vive rodeado de naturaleza en clúster privado con amenidades premium y acabados residenciales.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 16 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Punta del Este"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa residencial</p>
+                    <p class="precio-inmueble">$ 2,940,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>205 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">16. Casa Punta del Este</h2>
+                    <p class="ubicacion-inmueble">Punta del Este, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Área de asador</li>
+                        <li>Clósets incluidos</li>
+                        <li>Acceso controlado</li>
+                    </ul>
+                    <p class="resumen-inmueble">Zona de alta plusvalía al oriente de la ciudad con jardín posterior y cocina integral equipada.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 17 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Villas de San Juan"></li>
+                        <li><img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=700&q=80" alt="Sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Vie 09:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa accesible</p>
+                    <p class="precio-inmueble">$ 1,350,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>98 m²</strong> lote</li>
+                        <li><strong>2</strong> recámaras</li>
+                        <li><strong>1</strong> baño</li>
+                        <li><strong>1</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">17. Casa Villas de San Juan</h2>
+                    <p class="ubicacion-inmueble">Villas de San Juan, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Fácil acceso</li>
+                        <li>Protecciones incluidas</li>
+                        <li>Patio de servicio</li>
+                    </ul>
+                    <p class="resumen-inmueble">Excelente oportunidad con todos los servicios listos y gran comodidad.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 18 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&q=80" alt="Fachada Residencia Cañada del Refugio"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=700&q=80" alt="Estancia"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=80" alt="Cocina de lujo"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Mar-Dom 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Residencia premium</p>
+                    <p class="precio-inmueble">$ 4,850,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>380 m²</strong> lote</li>
+                        <li><strong>4</strong> recámaras</li>
+                        <li><strong>4</strong> baños</li>
+                        <li><strong>3</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">18. Residencia Cañada del Refugio</h2>
+                    <p class="ubicacion-inmueble">Cañada del Refugio, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Vista al bosque</li>
+                        <li>Cuarto de servicio</li>
+                        <li>Paneles solares</li>
+                    </ul>
+                    <p class="resumen-inmueble">Arquitectura contemporánea en zona norte con paneles solares y terrazas panorámicas.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 19 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Bosques de la Presa"></li>
+                        <li><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 10:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa residencial</p>
+                    <p class="precio-inmueble">$ 3,280,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>255 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">19. Casa Bosques de la Presa</h2>
+                    <p class="ubicacion-inmueble">Bosques de la Presa, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Cerca Parque Metropolitano</li>
+                        <li>Jardín amplio</li>
+                        <li>Chimenea</li>
+                    </ul>
+                    <p class="resumen-inmueble">A pocos minutos del Parque Metropolitano, calle arbolada y espacios muy acogedores.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 20 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Valle del Campestre"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1565183928294-7063f23ce0f8?auto=format&fit=crop&w=700&q=80" alt="Comedor"></li>
+                        <li><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80" alt="Baño"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Vie 09:30 - 17:30</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa ejecutiva</p>
+                    <p class="precio-inmueble">$ 2,620,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>190 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">20. Casa Valle del Campestre</h2>
+                    <p class="ubicacion-inmueble">Valle del Campestre, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Ubicación privilegiada</li>
+                        <li>Cocina equipada</li>
+                        <li>Bodega</li>
+                    </ul>
+                    <p class="resumen-inmueble">Cercana a plazas comerciales, hospitales y colegios de prestigio en zona dorada.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 21 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Paseo de los Insurgentes"></li>
+                        <li><img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=700&q=80" alt="Comedor"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa remodelada</p>
+                    <p class="precio-inmueble">$ 2,290,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>170 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">21. Casa Paseo de los Insurgentes</h2>
+                    <p class="ubicacion-inmueble">Col. Panorama, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Totalmente remodelada</li>
+                        <li>Pisos porcelanato</li>
+                        <li>Patio amplio</li>
+                    </ul>
+                    <p class="resumen-inmueble">Instalaciones eléctricas e hidráulicas nuevas, acabados modernos y excelente ubicación.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 22 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa San Pedro Plus"></li>
+                        <li><img src="https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=700&q=80" alt="Sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Vie 09:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa familiar</p>
+                    <p class="precio-inmueble">$ 1,740,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>130 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>1.5</strong> baños</li>
+                        <li><strong>1</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">22. Casa San Pedro Plus</h2>
+                    <p class="ubicacion-inmueble">Col. San Pedro Plus, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Cerca Blvd. Aeropuerto</li>
+                        <li>Calle tranquila</li>
+                        <li>Equipada</li>
+                    </ul>
+                    <p class="resumen-inmueble">Ideal para familias que buscan conectividad hacia Puerto Interior y zona sur de León.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 23 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600566752734-2a0cd66c42f6?auto=format&fit=crop&w=700&q=80" alt="Fachada Residencia Balcones del Campestre"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=700&q=80" alt="Estancia"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Sáb-Dom 11:00 - 17:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Residencia exclusiva</p>
+                    <p class="precio-inmueble">$ 5,190,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>450 m²</strong> lote</li>
+                        <li><strong>4</strong> recámaras</li>
+                        <li><strong>4.5</strong> baños</li>
+                        <li><strong>4</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">23. Residencia Balcones del Campestre</h2>
+                    <p class="ubicacion-inmueble">Balcones del Campestre, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Vista panorámica</li>
+                        <li>Salón de juegos</li>
+                        <li>Jardín 120 m²</li>
+                    </ul>
+                    <p class="resumen-inmueble">Residencia de autor con amplios ventanales, salón de usos múltiples y acabados en mármol.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 24 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa La Martinica"></li>
+                        <li><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=700&q=80" alt="Sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Sáb 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa residencial</p>
+                    <p class="precio-inmueble">$ 2,850,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>200 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">24. Casa La Martinica</h2>
+                    <p class="ubicacion-inmueble">Col. La Martinica, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Cerca Distrito León MX</li>
+                        <li>Terraza</li>
+                        <li>Cochera techada</li>
+                    </ul>
+                    <p class="resumen-inmueble">Ubicación céntrica y tradicional a pasos del Poliforum, estadio y parques recreativos.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+            <!-- CASA 25 -->
+            <article class="tarjeta-inmueble">
+                <figure class="foto-inmueble carrusel-contenedor">
+                    <ul class="carrusel-pista">
+                        <li><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=700&q=80" alt="Fachada Casa Cumbres de la Gloria"></li>
+                        <li><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=700&q=80" alt="Sala"></li>
+                        <li><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=700&q=80" alt="Cocina"></li>
+                        <li><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="Recámara"></li>
+                    </ul>
+                    <button type="button" class="btn-carrusel prev" aria-label="Foto anterior">&lsaquo;</button>
+                    <button type="button" class="btn-carrusel next" aria-label="Foto siguiente">&rsaquo;</button>
+                    <span class="contador-fotos">1 / 4</span>
+                    <figcaption class="franja-foto">Disponible &bull; Lun-Dom 10:00 - 18:00</figcaption>
+                </figure>
+                <section class="info-inmueble">
+                    <p class="tipo-propiedad">Casa nueva</p>
+                    <p class="precio-inmueble">$ 2,120,000 MXN</p>
+                    <ul class="datos-tecnicos">
+                        <li><strong>155 m²</strong> lote</li>
+                        <li><strong>3</strong> recámaras</li>
+                        <li><strong>2.5</strong> baños</li>
+                        <li><strong>2</strong> estac.</li>
+                    </ul>
+                    <h2 class="titulo-inmueble">25. Casa Cumbres de la Gloria</h2>
+                    <p class="ubicacion-inmueble">Cumbres de la Gloria, León, Guanajuato</p>
+                    <ul class="etiquetas-amenidades">
+                        <li>Estrena espacio</li>
+                        <li>Clúster privado</li>
+                        <li>Área verde</li>
+                    </ul>
+                    <p class="resumen-inmueble">Lista para entrega inmediata con acabados contemporáneos y seguridad privada.</p>
+                    <footer class="acciones-inmueble">
+                        <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="btn-whatsapp-card">WhatsApp</a>
+                        <a href="contacto.html" class="btn-contactar-card">Reservar</a>
+                    </footer>
+                </section>
+            </article>
+
+        </section>
+
+        <!-- MENSAJE CUANDO NO HAY COINCIDENCIAS -->
+        <article id="mensaje-sin-resultados" class="tarjeta-suave tarjeta-acento-amarillo mensaje-vacio" hidden>
+            <h2>No encontramos propiedades con esos filtros</h2>
+            <p>Intenta buscar con otra colonia, ajustar el precio o limpiar los filtros para ver las 25 opciones disponibles.</p>
+            <button type="button" id="btn-reset-vacio" class="boton-primario">Ver todas las propiedades</button>
+        </article>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Las Fauces. Todos los derechos reservados.</p>
+        <address>WhatsApp: 479 348 6012 | contacto@lasfauces.com | León, Guanajuato</address>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

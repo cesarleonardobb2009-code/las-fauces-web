@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Fauces | Reservaciones y Recibos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="encabezado-portal">
+        <section class="bloque-nav-izquierdo" aria-label="Marca y navegación principal">
+            <a href="index.html" class="marca-portal">
+                <img src="https://i.ibb.co/PZWQr73M/i.png" alt="Logotipo Las Fauces" class="logo-portal-img" style="height: 75px; width: auto;">
+                <strong>Las Fauces</strong>
+            </a>
+
+            <!-- Botón hamburguesa interactivo para versión móvil (Etapa 3) -->
+            <button type="button" id="btn-menu-movil" class="boton-hamburguesa" aria-label="Abrir menú de navegación" aria-expanded="false">
+                &#9776;
+            </button>
+
+            <nav id="nav-principal" aria-label="Menú principal">
+                <ul class="lista-menu-izquierdo">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Propiedades</a></li>
+                    <li><a href="contacto.html" class="activo">Reservar / Mi Recibo</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <aside class="bloque-acciones-derecho" aria-label="Contacto directo">
+            <a href="https://wa.me/524793486012" target="_blank" rel="noopener" class="boton-whatsapp-header">WhatsApp: 479 348 6012</a>
+        </aside>
+    </header>
+
+    <main class="contenedor-contacto-doble">
+        <header class="encabezado-seccion">
+            <h1>Reservación de Propiedad y Gestión de Recibo</h1>
+            <p>Reserva tu estancia o visita guiada en línea. El pago se realiza directamente en recepción al llegar.</p>
+        </header>
+
+        <!-- COMPROBANTE GENERADO AL TERMINAR LA RESERVA -->
+        <article id="confirmacion-envio" class="tarjeta-suave tarjeta-acento-amarillo caja-codigo-generado" hidden>
+            <h2>¡Reservación confirmada!</h2>
+            <p>Tu código único de reservación es:</p>
+            <p class="codigo-destacado" id="codigo-generado-texto">LF-000000</p>
+            <p class="advertencia-critica"><strong>⚠️ ADVERTENCIA IMPORTANTE:</strong> Guarda o anota este código ahora mismo. Lo necesitarás en el formulario de abajo para consultar tu recibo, imprimirlo en PDF o cancelar tu reserva.</p>
+        </article>
+
+        <!-- FORMULARIO PRINCIPAL DE RESERVA CON VALIDACIÓN JS (novalidate delega a JS) -->
+        <form id="formulario-contacto" class="formulario-cuadros-grid" novalidate>
+            <!-- CUADRO 1: DATOS PERSONALES -->
+            <fieldset class="cuadro-modular">
+                <legend>1. Tus datos personales</legend>
+
+                <p class="grupo-campo">
+                    <label for="nombre">Nombre completo del titular *</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana María López" required>
+                    <span class="mensaje-validacion" id="error-nombre" hidden></span>
+                </p>
+
+                <p class="grupo-campo">
+                    <label for="telefono">Teléfono / WhatsApp (10 dígitos) *</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 4771234567" required>
+                    <span class="mensaje-validacion" id="error-telefono" hidden></span>
+                </p>
+
+                <p class="grupo-campo">
+                    <label for="correo">Correo electrónico *</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                    <span class="mensaje-validacion" id="error-correo" hidden></span>
+                </p>
+
+                <p class="grupo-campo">
+                    <label for="huespedes">Número de personas *</label>
+                    <select id="huespedes" name="huespedes" required>
+                        <option value="1 persona">1 persona</option>
+                        <option value="2 personas" selected>2 personas</option>
+                        <option value="3 a 4 personas">3 a 4 personas</option>
+                        <option value="5 o más personas">5 o más personas</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <!-- CUADRO 2: PROPIEDAD, CALENDARIO Y PAGO EN EFECTIVO -->
+            <fieldset class="cuadro-modular">
+                <legend>2. Detalles de la reservación</legend>
+
+                <p class="grupo-campo">
+                    <label for="casa-seleccionada">Propiedad seleccionada *</label>
+                    <select id="casa-seleccionada" name="casa_seleccionada" required>
+                        <option value="">-- Selecciona una propiedad --</option>
+                        <option value="1. Casa Residencial Zona Norte">1. Casa Residencial Zona Norte</option>
+                        <option value="2. Casa Familiar Zona Centro">2. Casa Familiar Zona Centro</option>
+                        <option value="3. Residencia Campestre Zona Sur">3. Residencia Campestre Zona Sur</option>
+                        <option value="4. Casa Moderna Zona Oriente">4. Casa Moderna Zona Oriente</option>
+                        <option value="5. Quinta Residencial Zona Poniente">5. Quinta Residencial Zona Poniente</option>
+                        <option value="6. Casa Minimalista Valle Verde">6. Casa Minimalista Valle Verde</option>
+                        <option value="7. Casa Colonial San Ángel">7. Casa Colonial San Ángel</option>
+                        <option value="8. Casa Dúplex Las Torres">8. Casa Dúplex Las Torres</option>
+                        <option value="9. Residencia El Mirador">9. Residencia El Mirador</option>
+                        <option value="10. Residencia Gran Jardín">10. Residencia Gran Jardín</option>
+                        <option value="11. Casa Los Naranjos">11. Casa Los Naranjos</option>
+                        <option value="12. Casa Puerta Dorada">12. Casa Puerta Dorada</option>
+                        <option value="13. Casa Vista Hermosa">13. Casa Vista Hermosa</option>
+                        <option value="14. Casa Jardines de San Isidro">14. Casa Jardines de San Isidro</option>
+                        <option value="15. Residencia El Mayorazgo">15. Residencia El Mayorazgo</option>
+                        <option value="16. Casa Punta del Este">16. Casa Punta del Este</option>
+                        <option value="17. Casa Villas de San Juan">17. Casa Villas de San Juan</option>
+                        <option value="18. Residencia Cañada del Refugio">18. Residencia Cañada del Refugio</option>
+                        <option value="19. Casa Bosques de la Presa">19. Casa Bosques de la Presa</option>
+                        <option value="20. Casa Valle del Campestre">20. Casa Valle del Campestre</option>
+                        <option value="21. Casa Paseo de los Insurgentes">21. Casa Paseo de los Insurgentes</option>
+                        <option value="22. Casa San Pedro Plus">22. Casa San Pedro Plus</option>
+                        <option value="23. Residencia Balcones del Campestre">23. Residencia Balcones del Campestre</option>
+                        <option value="24. Casa La Martinica">24. Casa La Martinica</option>
+                        <option value="25. Casa Cumbres de la Gloria">25. Casa Cumbres de la Gloria</option>
+                    </select>
+                    <span class="mensaje-validacion" id="error-propiedad" hidden></span>
+                </p>
+
+                <p class="grupo-campo">
+                    <label for="fecha-hora-reserva">Fecha y hora de llegada (Calendario) *</label>
+                    <input type="datetime-local" id="fecha-hora-reserva" name="fecha_hora_reserva" required>
+                    <span class="mensaje-validacion" id="error-fecha" hidden></span>
+                </p>
+
+                <!-- ALERTA DE DISPONIBILIDAD (Se muestra si ese día ya está reservado) -->
+                <aside id="alerta-fecha-ocupada" class="alerta-ocupado" role="alert" hidden>
+                    <strong>❌ Fecha no disponible:</strong> Esta propiedad ya cuenta con una reservación activa para ese mismo día. Por favor selecciona otra fecha en el calendario.
+                </aside>
+
+                <p class="grupo-campo">
+                    <label for="metodo-pago">Método de pago autorizado *</label>
+                    <input type="text" id="metodo-pago" name="metodo_pago" value="Efectivo en recepción del hotel" readonly>
+                </p>
+
+                <aside class="aviso-pago-hotel" role="note">
+                    <strong>⚠️ Aviso de pago:</strong> No se realizan cobros en línea. El pago total deberá cubrirse <strong>únicamente en efectivo directamente en la recepción del hotel</strong> al momento de tu llegada presentando tu código.
+                </aside>
+            </fieldset>
+
+            <!-- CUADRO 3: NOTAS ADICIONALES -->
+            <fieldset class="cuadro-modular cuadro-ancho-completo">
+                <legend>3. Peticiones especiales y confirmación</legend>
+
+                <p class="grupo-campo">
+                    <label for="mensaje">Notas o requerimientos especiales (opcional)</label>
+                    <textarea id="mensaje" name="mensaje" rows="3" placeholder="Ej. Llegada tardía, solicitud de estacionamiento, etc."></textarea>
+                </p>
+
+                <footer class="pie-formulario">
+                    <button type="submit" id="btn-guardar-reserva" class="boton-accion-formulario">Confirmar Reservación y Generar Código</button>
+                </footer>
+            </fieldset>
+        </form>
+
+        <!-- MINI FORMULARIO: INICIAR SESIÓN CON CÓDIGO DE RESERVA / RECIBO -->
+        <section class="seccion-consulta-recibo" aria-label="Consulta de reservación con código">
+            <form id="form-buscar-reserva" class="cuadro-modular">
+                <legend>Consulta, Imprime o Cancela tu Reservación</legend>
+                <p class="nota-whatsapp">Ingresa el código de recibo que se te entregó al reservar (ej. <strong>LF-849201</strong>) para abrir tu comprobante.</p>
+
+                <p class="fila-busqueda-codigo">
+                    <input type="text" id="input-codigo-consulta" placeholder="Escribe tu código (Ej. LF-123456)" required>
+                    <button type="submit" class="boton-primario">Abrir mi Recibo</button>
+                </p>
+                <p id="mensaje-error-codigo" class="texto-error" hidden></p>
+            </form>
+
+            <!-- PANEL DE RECIBO ENCONTRADO (IMPRIMIR / PDF / CANCELAR) -->
+            <article id="panel-recibo-detalle" class="recibo-oficial" hidden>
+                <header class="encabezado-recibo">
+                    <h2>Comprobante Oficial de Reservación - Las Fauces</h2>
+                    <p>Código de Recibo: <strong id="rec-codigo"></strong> | Estado: <strong id="rec-estado"></strong></p>
+                </header>
+
+                <ul class="lista-datos-recibo">
+                    <li><strong>Titular:</strong> <span id="rec-nombre"></span></li>
+                    <li><strong>Teléfono / WhatsApp:</strong> <span id="rec-telefono"></span></li>
+                    <li><strong>Correo electrónico:</strong> <span id="rec-correo"></span></li>
+                    <li><strong>Propiedad reservada:</strong> <span id="rec-propiedad"></span></li>
+                    <li><strong>Fecha y hora de llegada:</strong> <span id="rec-fecha"></span></li>
+                    <li><strong>Personas:</strong> <span id="rec-personas"></span></li>
+                    <li><strong>Método de pago:</strong> <span id="rec-pago"></span></li>
+                    <li><strong>Notas:</strong> <span id="rec-notas"></span></li>
+                </ul>
+
+                <p class="aviso-pago-hotel">
+                    <strong>Recordatorio:</strong> Presenta este recibo impreso o en PDF al llegar. El pago se efectúa <strong>en efectivo en recepción del hotel</strong>.
+                </p>
+
+                <footer class="acciones-recibo no-imprimir">
+                    <button type="button" id="btn-imprimir-pdf" class="boton-primario">Imprimir / Guardar como PDF</button>
+                    <button type="button" id="btn-cancelar-reserva" class="boton-cancelar-reserva">Cancelar Reservación</button>
+                </footer>
+            </article>
+        </section>
+    </main>
+
+    <footer class="pie-pagina no-imprimir">
+        <p>&copy; 2026 Las Fauces. Todos los derechos reservados.</p>
+        <address>WhatsApp: 479 348 6012 | contacto@lasfauces.com | León, Guanajuato</address>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
