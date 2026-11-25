@@ -199,6 +199,55 @@
                 </footer>
             </article>
         </section>
+        <!-- ======================================================================
+     PANEL DE ADMINISTRACIÓN (GESTIÓN DE RESERVACIONES Y CASAS VENDIDAS)
+     ====================================================================== -->
+<section class="panel-admin-seccion" aria-label="Panel de Administrador">
+    <details id="acordeon-admin">
+        <summary class="btn-acceso-admin">🔒 Acceso Administrador (Gestión de Base de Datos)</summary>
+
+        <!-- Login rápido de administrador -->
+        <div id="admin-login-box" class="admin-caja">
+            <label for="admin-password">Clave de Administrador:</label>
+            <div class="admin-fila-login">
+                <input type="password" id="admin-password" placeholder="Ingresa la clave de admin">
+                <button type="button" id="btn-admin-entrar" class="btn-principal">Entrar</button>
+            </div>
+            <p id="admin-error-login" class="mensaje-error-campo" hidden>❌ Clave incorrecta.</p>
+        </div>
+
+        <!-- Panel activo (visible solo al iniciar sesión) -->
+        <div id="admin-contenido" class="admin-caja" hidden>
+            <div class="admin-barra-superior">
+                <h3>Panel de Control · Base de Datos en Vivo</h3>
+                <button type="button" id="btn-admin-salir" class="btn-secundario">Cerrar Sesión</button>
+            </div>
+
+            <!-- 1. Control de disponibilidad de propiedades (Disponible / Vendida) -->
+            <div class="admin-bloque">
+                <h4>1. Estatus de Propiedades (Marcar como Vendida)</h4>
+                <p class="admin-ayuda">Al marcar una casa como vendida, se mostrará el sello <strong>VENDIDA</strong> en el catálogo y se bloqueará para nuevas citas.</p>
+                <div class="admin-fila-propiedad">
+                    <select id="admin-select-propiedad">
+                        <option value="">-- Selecciona una propiedad --</option>
+                    </select>
+                    <button type="button" id="btn-marcar-vendida" class="btn-peligro">Marcar como Vendida</button>
+                    <button type="button" id="btn-marcar-disponible" class="btn-exito">Volver a Disponible</button>
+                </div>
+                <ul id="lista-casas-vendidas" class="lista-admin-vendidas"></ul>
+            </div>
+
+            <!-- 2. Gestión de todas las reservaciones en Firestore -->
+            <div class="admin-bloque">
+                <h4>2. Reservaciones Registradas en Firestore</h4>
+                <button type="button" id="btn-recargar-reservas" class="btn-secundario">Actualizar Lista</button>
+                <div id="contenedor-tabla-admin" class="tabla-admin-scroll">
+                    <p>Cargando reservaciones...</p>
+                </div>
+            </div>
+        </div>
+    </details>
+</section>
     </main>
 
     <footer class="pie-pagina no-imprimir">
