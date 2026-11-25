@@ -1,6 +1,11 @@
 /**
  * ============================================================================
  * PROYECTO: LAS FAUCES - PORTAL INMOBILIARIO Y RESERVACIONES
+ * ETAPA 3: LÓGICA DEL CLIENTE (JAVASCRIPT)
+ * - Menú hamburguesa interactivo para versión móvil (evento click)
+ * - Carrusel de fotografías y filtrado dinámico del catálogo
+ * - Validación completa del formulario (nombre, teléfono 10 dígitos, email y fecha)
+ * - Conexión a Firebase Firestore (margen de 2 horas entre visitas, recibos y PDF)
  * ============================================================================
  */
 
@@ -8,22 +13,19 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/fireba
 import { getFirestore, doc, setDoc, getDoc, updateDoc, collection, query, where, getDocs } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 // ==========================================================================
-// 1. CONFIGURACIÓN DE FIREBASE FIRESTORE
+// 1. CONFIGURACIÓN DE FIREBASE FIRESTORE (PROYECTO: las-fauces-3a9f0)
 // ==========================================================================
 const firebaseConfig = {
-    apiKey: "TU_API_KEY",
-    authDomain: "TU_PROYECTO.firebaseapp.com",
-    projectId: "TU_PROYECTO_ID",
-    storageBucket: "TU_PROYECTO.appspot.com",
-    messagingSenderId: "TU_SENDER_ID",
-    appId: "TU_APP_ID"
+    apiKey: "AIzaSyBr6I6QqNPSAC36NmM6Fo2eW1m75C7VAg8",
+    authDomain: "las-fauces-3a9f0.firebaseapp.com",
+    projectId: "las-fauces-3a9f0",
+    storageBucket: "las-fauces-3a9f0.firebasestorage.app",
+    messagingSenderId: "23106711536",
+    appId: "1:23106711536:web:f874f29dfeacfcd628b735"
 };
 
-let db = null;
-if (firebaseConfig.projectId !== "TU_PROYECTO_ID") {
-    const app = initializeApp(firebaseConfig);
-    db = getFirestore(app);
-}
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 document.addEventListener('DOMContentLoaded', () => {
     // ======================================================================
@@ -239,11 +241,14 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        // Consultar disponibilidad en Firebase Firestore
+        // Consultar disponibilidad en Firebase Firestore (margen mínimo de 2 horas entre citas)
         const verificarDiaOcupado = async (propiedad, fechaHoraIso) => {
-            if (!db || !propiedad || !fechaHoraIso) return false;
+            if (!propiedad || !fechaHoraIso) return false;
 
             const soloDia = fechaHoraIso.split('T')[0];
+            const horaSolicitadaMs = new Date(fechaHoraIso).getTime();
+            const dosHorasMs = 2 * 60 * 60 * 1000; // 2 horas en milisegundos
+
             const q = query(
                 collection(db, "reservaciones"),
                 where("propiedad", "==", propiedad),
@@ -256,7 +261,13 @@ document.addEventListener('DOMContentLoaded', () => {
             resultados.forEach((documento) => {
                 const data = documento.data();
                 if (!data.estado.includes('CANCELADA')) {
-                    ocupado = true;
+                    const horaExistenteMs = new Date(data.fechaHora).getTime();
+                    const diferenciaMs = Math.abs(horaSolicitadaMs - horaExistenteMs);
+
+                    // Si la diferencia es menor a 2 horas, se considera horario empalmado
+                    if (diferenciaMs < dosHorasMs) {
+                        ocupado = true;
+                    }
                 }
             });
 
@@ -280,11 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            if (!db) {
-                alert('⚠️ Primero debes pegar tus credenciales de Firebase en las primeras líneas de main.js.');
-                return;
-            }
-
             const btnGuardar = document.getElementById('btn-guardar-reserva');
             btnGuardar.disabled = true;
             btnGuardar.textContent = 'Verificando disponibilidad...';
@@ -294,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const soloDia = fechaHoraSeleccionada.split('T')[0];
 
             try {
-                // 2. Verificar que la propiedad no esté ocupada ese día en Firebase
+                // 2. Verificar que no exista otra visita en un rango menor a 2 horas en Firebase
                 const yaOcupado = await verificarDiaOcupado(propiedadSeleccionada, fechaHoraSeleccionada);
 
                 if (yaOcupado) {
@@ -381,11 +387,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         formBuscar.addEventListener('submit', async (e) => {
             e.preventDefault();
-            if (!db) {
-                alert('⚠️ Primero debes pegar tus credenciales de Firebase en main.js.');
-                return;
-            }
-
             const codigoBuscado = inputCodigo.value.trim().toUpperCase();
 
             try {
@@ -411,9 +412,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         btnCancelar.addEventListener('click', async () => {
-            if (!codigoActualAbierto || !db) return;
+            if (!codigoActualAbierto) return;
 
-            const confirmar = confirm(`¿Estás seguro de que deseas cancelar la reservación ${codigoActualAbierto}? El día volverá a quedar disponible.`);
+            const confirmar = confirm(`¿Estás seguro de que deseas cancelar la reservación ${codigoActualAbierto}? El horario volverá a quedar disponible.`);
             if (!confirmar) return;
 
             try {

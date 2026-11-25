@@ -702,3 +702,27 @@ img {
     .boton-opcion-grande { padding: 1.1rem 1.3rem; }
     .boton-accion-formulario { width: 100%; }
 }
+
+/* ==========================================================================
+   ALERTAS DE VALIDACIÓN DE FORMULARIO Y EMBLEMA LAS FAUCES
+   ========================================================================== */
+.campo-invalido {
+    border: 2px solid #c62828 !important;
+    background-color: #fff5f5 !important;
+}
+
+.mensaje-error-campo {
+    display: block;
+    margin-top: 6px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #b71c1c;
+    background-color: #ffebee;
+    border-left: 3px solid #c62828;
+    border-radius: 4px;
+}
+
+.mensaje-error-campo[hidden] {
+    display: none;
+}
