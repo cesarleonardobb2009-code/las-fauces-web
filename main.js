@@ -23,7 +23,7 @@ const firebaseConfig = {
     appId: "1:23106711536:web:f874f29dfeacfcd628b735"
 };
 
-const CLAVE_ADMIN = "AdminFauces2026"; // Cambia esta clave si deseas otra contraseña
+const CLAVE_ADMIN = "AdminFauces2026"; // Clave para entrar al panel administrador
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
@@ -184,6 +184,22 @@ document.addEventListener('DOMContentLoaded', async () => {
         const inputFechaHora = document.getElementById('fecha-hora-reserva');
         const alertaFechaOcupada = document.getElementById('alerta-fecha-ocupada');
         const avisoGeneralError = document.getElementById('aviso-general-formulario');
+
+        // Enlace Admin dentro del menú hamburguesa (solo en contacto.html)
+        const linkMenuAdmin = document.getElementById('link-menu-admin');
+        const acordeonAdmin = document.getElementById('acordeon-admin');
+
+        linkMenuAdmin?.addEventListener('click', () => {
+            if (navPrincipal?.classList.contains('abierto')) {
+                navPrincipal.classList.remove('abierto');
+                btnMenuMovil?.setAttribute('aria-expanded', 'false');
+                if (btnMenuMovil) btnMenuMovil.innerHTML = '&#9776;';
+            }
+            if (acordeonAdmin) {
+                acordeonAdmin.open = true;
+                acordeonAdmin.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
 
         // Deshabilitar en el <select> las propiedades marcadas como VENDIDAS
         if (selectCasa) {
