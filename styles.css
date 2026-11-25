@@ -873,3 +873,28 @@ img {
     border-radius: 4px;
     cursor: pointer;
 }
+
+/* Ajuste responsivo del Panel Admin en pantalla móvil */
+@media (max-width: 600px) {
+    .panel-admin-seccion,
+    .admin-caja {
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    .btn-acceso-admin,
+    .admin-barra-superior h3,
+    .admin-bloque h4,
+    .admin-ayuda,
+    .lista-admin-vendidas li {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .admin-fila-propiedad select,
+    .admin-fila-propiedad button {
+        width: 100%;
+    }
+}
